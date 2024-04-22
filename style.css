@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background: linear-gradient(rgb(99, 7, 104), rgb(135, 3, 201));
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 75vw;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 1, 8, 0.5);
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.countryname {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 15px
+  ;
+}
+.countryname input {
+  width: 300px;
+  padding: 10px;
+  outline: none;
+  border: 2px solid rgb(135, 5, 201);
+  font-size: 16px;
+}
+.countryname button {
+  height: 50px;
+  width: 100px;
+  background:rgb(138, 7, 204) ;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+#search-result{
+    display: none;
+    text-align: center;
+    
+}
+#search-result h2,h4{
+    margin-top: 10px;
+    font-size: 20px;
+}
+#search-result h4 span{
+    color: red;
+}
+#name{
+    color: red;
+}
+#search-result img{
+    width: 200px;
+    margin-top: 20px;
+}
