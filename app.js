@@ -1,4 +1,4 @@
-let countryInput = document.getElementById("searchCountry").value.trim();
+let countryInput = document.getElementById("searchCountry");
 let search = document.getElementById("search");
 let searchResult = document.getElementById("search-result");
 let flag = document.getElementById("flag");
@@ -13,18 +13,19 @@ search.addEventListener("click", function () {
     return;
   }
 
-//   let countryName = countryInput;
-  let url = `https://restcountries.com/v3.1/all${countryInput}`;
-  fetch(url)
+ let countryName = countryInput.value;
+  let apiUrl = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`
+  console.log(apiUrl);
+  fetch(apiUrl)
     .then((response) =>
      response.json())
     .then(function (data) {
-      searchResult.style.display = "block";
-
+      
       if(data.status === 404){
         alert('Country Not Found!');
         return;
       }
+      searchResult.style.display = "block";
 
       countryData = data[0];
       console.log(countryData);
